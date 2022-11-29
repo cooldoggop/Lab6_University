@@ -83,23 +83,13 @@ public class Lab_6 {
         return f;
     }
     public static void num4(double a, int sc){
-      /*  String a1 = Double.toString(a);
-        double end = 0;
-        for (int i = 2; i <= a1.length(); i++){
-            char t = a1.charAt(i);
-            int k = t - '0';
-            double pre = k * pow(sc,-(i-1));
-            end =+ pre;
-        }*/
-        double n =0.1;
+        //double n =0.1;
         double i;
         double result = 0;
-        while (a != 0){
-            a *= sc;
-            i = a - (a % 1);
-            result =+ i*n;
-            n *= 0.1;
-            a = a % 1;
+        for (int j = 1;j <= 10; j++ ){
+            i = a*sc;
+            result += (int)i * pow(0.1,j);
+            a = i - (int)i;
         }
         System.out.println(result);
     }
